@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -6,9 +6,10 @@ import {v4 as uuidv4 } from "uuid";
 
 const App = () => {
 
-const [items, setItems] = useState([
-  { id: uuidv4(), itemName: 'bananas', quantity: 3, isSelected: false}
-]);
+const [items, setItems] = useState([]);
+	useEffect(() => {
+		localStorage.setItem('items', JSON.stringify(items));
+  	}, [items]);
 
 const [inputValue, setInputValue] = useState('');
 
