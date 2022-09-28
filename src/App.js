@@ -10,7 +10,12 @@ const [items, setItems] = useState([]);
 	useEffect(() => {
 		localStorage.setItem('items', JSON.stringify(items));
   	}, [items]);
-
+	  useEffect(() => {
+		const items = JSON.parse(localStorage.getItem('items'));
+		if (items) {
+		 setItems(items);
+		}
+	  }, []);
 const [inputValue, setInputValue] = useState('');
 
 const handleAddButtonClick = () => {
