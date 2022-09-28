@@ -1,18 +1,94 @@
+* {
+  font-size: 36px;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, rgba(129,223,221,1) 14%, rgba(23,226,212,1) 52%, rgba(10,127,125,1) 100%);
+  font-family: sans-serif;
+  padding: 0;
+  color: aqua;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.listApp {
+.App {
+  font-family: sans-serif;
   text-align: center;
+}
+.app-background {
+  background: linear-gradient(45deg, rgba(134,100,235,1) 0%, rgba(222,163,232,1) 46%, rgba(224,223,227,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.main-container {
+  background: linear-gradient(45deg, rgba(99,62,222,1) 0%, rgba(146,121,172,1) 34%, rgba(231,132,145,1) 100%);
+  width: 500px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
+}
+.add-item-box {
+  color: black;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.add-item-box svg {
+  margin: 10px;
+}
+.add-item-input {
+  box-sizing: border-box;
+  border: none;
+  color: rgb(46, 70, 62);
+  background: transparent;
+  width: 100%;
+  height: 30px;
+}
+input::placeholder {
+  color: rgb(46, 70, 62);
+}
+input:focus {
+  outline: 0;
+}
+.item-list {
+  display: flex;
+  flex-direction: column;
+}
+.item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+}
+.item-name {
+  cursor: pointer;
+}
+.item-name svg {
+  margin-right: 15px;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-radius: 50px;
+  font-size: 13px;
+  color: aqua;
+  min-width: 70px;
+  justify-content: space-between;
+}
+button {
+  background: transparent;
+  border: none;
+  margin: 3px;
+  color: aqua;
+}
+button:focus {
+  outline: 0;
+}
+button:hover {
+  cursor: pointer;
+}
+.completed {
+  text-decoration: line-through;
 }
