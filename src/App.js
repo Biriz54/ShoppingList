@@ -62,7 +62,7 @@ const handleDeleteItem = (id) => {
 					<FontAwesomeIcon icon={faPlus} onClick={() => handleAddButtonClick()} />
 				</div>
 				<div className='item-list'>
-					{items.map((item, index) => (
+					{localStorage.items.map((item, index) => (
 						<div className='item-container'>
 							<div className='item-name' onClick={() => toggleComplete(index)}>
 								{item.isSelected ? (
